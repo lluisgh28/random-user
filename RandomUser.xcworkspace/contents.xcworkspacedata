@@ -5,6 +5,9 @@
       location = "group:RandomUser.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:RandomUserDomainKit.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>

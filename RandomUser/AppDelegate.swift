@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RandomUserDomainKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
