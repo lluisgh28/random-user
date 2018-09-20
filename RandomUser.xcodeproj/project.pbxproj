@@ -15,6 +15,7 @@
 		1F91621E215392CA0056C604 /* RandomUserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F91621D215392CA0056C604 /* RandomUserTests.swift */; };
 		1F916229215392CB0056C604 /* RandomUserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F916228215392CB0056C604 /* RandomUserUITests.swift */; };
 		1FD4F8BB2153A1A6009D9DC0 /* RandomUserDomainKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FD4F8BA2153A1A6009D9DC0 /* RandomUserDomainKit.framework */; };
+		1FD4F90E2153A2B7009D9DC0 /* RandomUserDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FD4F90D2153A2B7009D9DC0 /* RandomUserDataKit.framework */; };
 		596AE0F6A382F7DD3B078716 /* Pods_RandomUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C8BC9DB8B32D4BFE361242F /* Pods_RandomUser.framework */; };
 		B2A20B444CF962EC38FB80D4 /* Pods_RandomUser_RandomUserTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE24192EA399B7D243070CA4 /* Pods_RandomUser_RandomUserTests.framework */; };
 /* End PBXBuildFile section */
@@ -52,6 +53,7 @@
 		1F916228215392CB0056C604 /* RandomUserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUserUITests.swift; sourceTree = "<group>"; };
 		1F91622A215392CB0056C604 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FD4F8BA2153A1A6009D9DC0 /* RandomUserDomainKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RandomUserDomainKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FD4F90D2153A2B7009D9DC0 /* RandomUserDataKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RandomUserDataKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B5FB4547400686611EC5D60 /* Pods-RandomUser-RandomUserTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomUser-RandomUserTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RandomUser-RandomUserTests/Pods-RandomUser-RandomUserTests.release.xcconfig"; sourceTree = "<group>"; };
 		AE24192EA399B7D243070CA4 /* Pods_RandomUser_RandomUserTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RandomUser_RandomUserTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0D4B21714435D1456568A1D /* Pods-RandomUser-RandomUserTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomUser-RandomUserTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RandomUser-RandomUserTests/Pods-RandomUser-RandomUserTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FD4F90E2153A2B7009D9DC0 /* RandomUserDataKit.framework in Frameworks */,
 				1FD4F8BB2153A1A6009D9DC0 /* RandomUserDomainKit.framework in Frameworks */,
 				596AE0F6A382F7DD3B078716 /* Pods_RandomUser.framework in Frameworks */,
 			);
@@ -154,6 +157,7 @@
 		B1680B431B7B1CB15EB345BE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1FD4F90D2153A2B7009D9DC0 /* RandomUserDataKit.framework */,
 				1FD4F8BA2153A1A6009D9DC0 /* RandomUserDomainKit.framework */,
 				0C8BC9DB8B32D4BFE361242F /* Pods_RandomUser.framework */,
 				AE24192EA399B7D243070CA4 /* Pods_RandomUser_RandomUserTests.framework */,
