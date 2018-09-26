@@ -170,6 +170,7 @@
 				1FD4F8A52153A17C009D9DC0 /* Sources */,
 				1FD4F8A62153A17C009D9DC0 /* Frameworks */,
 				1FD4F8A72153A17C009D9DC0 /* Resources */,
+				5FA4A369845AA6FB468D65E7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -270,6 +271,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5FA4A369845AA6FB468D65E7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RandomUserDomainKit-RandomUserDomainKitTests/Pods-RandomUserDomainKit-RandomUserDomainKitTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RandomUserDomainKit-RandomUserDomainKitTests/Pods-RandomUserDomainKit-RandomUserDomainKitTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -481,7 +500,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 75139717976D637CC59534D9 /* Pods-RandomUserDomainKit-RandomUserDomainKitTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RandomUserDomainKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -500,7 +518,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2C6FB101D521472FDD0238E9 /* Pods-RandomUserDomainKit-RandomUserDomainKitTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RandomUserDomainKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
