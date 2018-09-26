@@ -1,6 +1,0 @@
-framework module Pods_RandomUserDomainKit_RandomUserDomainKitTests {
-  umbrella header "Pods-RandomUserDomainKit-RandomUserDomainKitTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
