@@ -14,12 +14,15 @@ import RandomUserDataKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    private let appFactory = AppFactory()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = UIViewController()
+        let userListViewController = appFactory.userListModuleFactory.makeViewController()
+        let navigationController = UINavigationController(rootViewController: userListViewController)
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
 
         return true

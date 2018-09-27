@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F6601E8215D3CF4008F9ADA /* UserListModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6601E7215D3CF4008F9ADA /* UserListModuleFactory.swift */; };
+		1F6601EA215D3D32008F9ADA /* AppFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6601E9215D3D32008F9ADA /* AppFactory.swift */; };
 		1F916209215392C80056C604 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F916208215392C80056C604 /* AppDelegate.swift */; };
 		1F916210215392CA0056C604 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F91620F215392CA0056C604 /* Assets.xcassets */; };
 		1F916213215392CA0056C604 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F916211215392CA0056C604 /* LaunchScreen.storyboard */; };
@@ -37,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		0C8BC9DB8B32D4BFE361242F /* Pods_RandomUser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RandomUser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F6601E7215D3CF4008F9ADA /* UserListModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListModuleFactory.swift; sourceTree = "<group>"; };
+		1F6601E9215D3D32008F9ADA /* AppFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFactory.swift; sourceTree = "<group>"; };
 		1F916205215392C80056C604 /* RandomUser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomUser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F916208215392C80056C604 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F91620F215392CA0056C604 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,6 +90,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F6601E5215D3CDA008F9ADA /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				1F6601E6215D3CE1008F9ADA /* User List */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		1F6601E6215D3CE1008F9ADA /* User List */ = {
+			isa = PBXGroup;
+			children = (
+				1F6601E7215D3CF4008F9ADA /* UserListModuleFactory.swift */,
+			);
+			path = "User List";
+			sourceTree = "<group>";
+		};
 		1F9161FC215392C80056C604 = {
 			isa = PBXGroup;
 			children = (
@@ -111,7 +131,9 @@
 		1F916207215392C80056C604 /* RandomUser */ = {
 			isa = PBXGroup;
 			children = (
+				1F6601E5215D3CDA008F9ADA /* Modules */,
 				1F916208215392C80056C604 /* AppDelegate.swift */,
+				1F6601E9215D3D32008F9ADA /* AppFactory.swift */,
 				1F91620F215392CA0056C604 /* Assets.xcassets */,
 				1F916211215392CA0056C604 /* LaunchScreen.storyboard */,
 				1F916214215392CA0056C604 /* Info.plist */,
@@ -388,7 +410,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F6601EA215D3D32008F9ADA /* AppFactory.swift in Sources */,
 				1F916209215392C80056C604 /* AppDelegate.swift in Sources */,
+				1F6601E8215D3CF4008F9ADA /* UserListModuleFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
