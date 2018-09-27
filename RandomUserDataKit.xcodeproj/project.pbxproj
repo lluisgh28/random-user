@@ -10,6 +10,9 @@
 		1F6601CC215BB1C3008F9ADA /* RealmUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6601CB215BB1C3008F9ADA /* RealmUser.swift */; };
 		1F6601CE215BBA63008F9ADA /* RealmUserDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6601CD215BBA63008F9ADA /* RealmUserDataStore.swift */; };
 		1F6601DA215CDE59008F9ADA /* APIUserDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6601D9215CDE59008F9ADA /* APIUserDataStore.swift */; };
+		1F6601DC215D01A5008F9ADA /* UserDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6601DB215D01A5008F9ADA /* UserDataStore.swift */; };
+		1F6601DE215D090E008F9ADA /* RealmUserAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6601DD215D090E008F9ADA /* RealmUserAdapter.swift */; };
+		1F6601E4215D3574008F9ADA /* RandomUserDomainKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F6601E3215D3574008F9ADA /* RandomUserDomainKit.framework */; };
 		1FD4F8FD2153A289009D9DC0 /* RandomUserDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FD4F8F32153A289009D9DC0 /* RandomUserDataKit.framework */; };
 		1FD4F9022153A289009D9DC0 /* RandomUserDataKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD4F9012153A289009D9DC0 /* RandomUserDataKitTests.swift */; };
 		1FD4F9042153A289009D9DC0 /* RandomUserDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FD4F8F62153A289009D9DC0 /* RandomUserDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -32,6 +35,9 @@
 		1F6601CB215BB1C3008F9ADA /* RealmUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUser.swift; sourceTree = "<group>"; };
 		1F6601CD215BBA63008F9ADA /* RealmUserDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUserDataStore.swift; sourceTree = "<group>"; };
 		1F6601D9215CDE59008F9ADA /* APIUserDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIUserDataStore.swift; sourceTree = "<group>"; };
+		1F6601DB215D01A5008F9ADA /* UserDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataStore.swift; sourceTree = "<group>"; };
+		1F6601DD215D090E008F9ADA /* RealmUserAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUserAdapter.swift; sourceTree = "<group>"; };
+		1F6601E3215D3574008F9ADA /* RandomUserDomainKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RandomUserDomainKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FD4F8F32153A289009D9DC0 /* RandomUserDataKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RandomUserDataKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FD4F8F62153A289009D9DC0 /* RandomUserDataKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RandomUserDataKit.h; sourceTree = "<group>"; };
 		1FD4F8F72153A289009D9DC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F6601E4215D3574008F9ADA /* RandomUserDomainKit.framework in Frameworks */,
 				22ABC275F0C4C7311ADDD472 /* Pods_RandomUserDataKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,7 +78,9 @@
 			children = (
 				1F6601CB215BB1C3008F9ADA /* RealmUser.swift */,
 				1F6601CD215BBA63008F9ADA /* RealmUserDataStore.swift */,
+				1F6601DD215D090E008F9ADA /* RealmUserAdapter.swift */,
 				1F6601D9215CDE59008F9ADA /* APIUserDataStore.swift */,
+				1F6601DB215D01A5008F9ADA /* UserDataStore.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -118,6 +127,7 @@
 		6CE9E2A17FC1CA6A1CE35AAB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1F6601E3215D3574008F9ADA /* RandomUserDomainKit.framework */,
 				DE934A09D39C97D8A4ED3F2F /* Pods_RandomUserDataKit.framework */,
 				BC44FE81869720D164DE5925 /* Pods_RandomUserDataKit_RandomUserDataKitTests.framework */,
 			);
@@ -314,6 +324,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F6601DE215D090E008F9ADA /* RealmUserAdapter.swift in Sources */,
+				1F6601DC215D01A5008F9ADA /* UserDataStore.swift in Sources */,
 				1F6601DA215CDE59008F9ADA /* APIUserDataStore.swift in Sources */,
 				1F6601CE215BBA63008F9ADA /* RealmUserDataStore.swift in Sources */,
 				1F6601CC215BB1C3008F9ADA /* RealmUser.swift in Sources */,
