@@ -24,3 +24,15 @@ target 'RandomUserDomainKit' do
     project 'RandomUserDomainKit.xcodeproj'
   end
 end
+
+target 'RandomUserDataKit' do
+  project 'RandomUserDataKit.xcodeproj'
+
+  pod 'RxSwift',                        $rxSwiftVersion
+  pod 'RealmSwift',                     '~> 3.10'
+  pod 'RxRealm',                        '~> 0.7'
+
+  target 'RandomUserDataKitTests' do
+    project 'RandomUserDataKit.xcodeproj'
+  end
+end
