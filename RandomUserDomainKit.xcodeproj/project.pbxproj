@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F6601C9215B8B46008F9ADA /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6601C8215B8B46008F9ADA /* UserRepository.swift */; };
 		1FD4F8AA2153A17C009D9DC0 /* RandomUserDomainKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FD4F8A02153A17C009D9DC0 /* RandomUserDomainKit.framework */; };
 		1FD4F8AF2153A17C009D9DC0 /* RandomUserDomainKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD4F8AE2153A17C009D9DC0 /* RandomUserDomainKitTests.swift */; };
 		1FD4F8B12153A17C009D9DC0 /* RandomUserDomainKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FD4F8A32153A17C009D9DC0 /* RandomUserDomainKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		0BB038E81A6223932495DE7B /* Pods_RandomUserDomainKit_RandomUserDomainKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RandomUserDomainKit_RandomUserDomainKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F6601C8215B8B46008F9ADA /* UserRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		1FD4F8A02153A17C009D9DC0 /* RandomUserDomainKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RandomUserDomainKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FD4F8A32153A17C009D9DC0 /* RandomUserDomainKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RandomUserDomainKit.h; sourceTree = "<group>"; };
 		1FD4F8A42153A17C009D9DC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -81,6 +83,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		1F6601C7215B8B46008F9ADA /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				1F6601C8215B8B46008F9ADA /* UserRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		1FD4F8962153A17C009D9DC0 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +114,7 @@
 		1FD4F8A22153A17C009D9DC0 /* RandomUserDomainKit */ = {
 			isa = PBXGroup;
 			children = (
+				1F6601C7215B8B46008F9ADA /* Repository */,
 				1F6601BC215B69CB008F9ADA /* Model */,
 				1FD4F8A32153A17C009D9DC0 /* RandomUserDomainKit.h */,
 				1FD4F8A42153A17C009D9DC0 /* Info.plist */,
@@ -298,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F6601C9215B8B46008F9ADA /* UserRepository.swift in Sources */,
 				1FD4F9102153B2BB009D9DC0 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
