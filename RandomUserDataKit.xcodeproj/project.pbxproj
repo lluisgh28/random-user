@@ -510,7 +510,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1F3074A0716CE44D719D49C5 /* Pods-RandomUserDataKit-RandomUserDataKitTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RandomUserDataKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -529,7 +528,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9DA6BCAD21B577D76F4DCF11 /* Pods-RandomUserDataKit-RandomUserDataKitTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RandomUserDataKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
