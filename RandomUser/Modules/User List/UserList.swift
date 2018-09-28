@@ -18,6 +18,12 @@ struct UserList {
         let users: [User]
         let isLoading: Bool
         let error: Error?
+        
+        init(users: [User], isLoading: Bool, error: Error?) {
+            self.users = users
+            self.isLoading = isLoading
+            self.error = error
+        }
     }
 
     enum SupportedRoute: Route {

@@ -7,12 +7,22 @@
 //
 
 import UIKit
+import RandomUserDomainKit
 
 class UserListModuleFactory {
     
+    private let userRepository: UserRepository
+    
+    init(userRepository: UserRepository) {
+        self.userRepository = userRepository
+    }
+    
     func makeViewController() -> UIViewController {
         let presenter = UserListPresenter()
-        let interactor = UserListInteractor(presenter: presenter)
+        let interactor = UserListInteractor(
+            presenter: presenter,
+            userRepository: userRepository
+        )
         let router = UserListRouter()
         let viewController = UserListViewController(
             interactor: interactor, router: router
