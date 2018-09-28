@@ -7,7 +7,9 @@
 //
 
 import Foundation
+import RandomUserDataKit
 
 class AppFactory {
-    lazy var userListModuleFactory = UserListModuleFactory()
+    lazy var userRepository = UserDataStore()
+    lazy var userListModuleFactory = UserListModuleFactory(userRepository: userRepository)
 }
