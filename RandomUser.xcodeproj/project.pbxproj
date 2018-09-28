@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		1F6601E8215D3CF4008F9ADA /* UserListModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6601E7215D3CF4008F9ADA /* UserListModuleFactory.swift */; };
 		1F6601EA215D3D32008F9ADA /* AppFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6601E9215D3D32008F9ADA /* AppFactory.swift */; };
+		1F6601EC215D40AF008F9ADA /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6601EB215D40AF008F9ADA /* UserListViewController.swift */; };
+		1F6601EE215D40E0008F9ADA /* UserListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6601ED215D40E0008F9ADA /* UserListInteractor.swift */; };
+		1F6601F0215D412D008F9ADA /* UserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6601EF215D412D008F9ADA /* UserList.swift */; };
+		1F6601F2215D413F008F9ADA /* UserListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6601F1215D413F008F9ADA /* UserListPresenter.swift */; };
+		1F6601F4215D4156008F9ADA /* UserListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6601F3215D4156008F9ADA /* UserListRouter.swift */; };
 		1F916209215392C80056C604 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F916208215392C80056C604 /* AppDelegate.swift */; };
 		1F916210215392CA0056C604 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F91620F215392CA0056C604 /* Assets.xcassets */; };
 		1F916213215392CA0056C604 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F916211215392CA0056C604 /* LaunchScreen.storyboard */; };
@@ -41,6 +46,11 @@
 		0C8BC9DB8B32D4BFE361242F /* Pods_RandomUser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RandomUser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F6601E7215D3CF4008F9ADA /* UserListModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListModuleFactory.swift; sourceTree = "<group>"; };
 		1F6601E9215D3D32008F9ADA /* AppFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFactory.swift; sourceTree = "<group>"; };
+		1F6601EB215D40AF008F9ADA /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
+		1F6601ED215D40E0008F9ADA /* UserListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListInteractor.swift; sourceTree = "<group>"; };
+		1F6601EF215D412D008F9ADA /* UserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserList.swift; sourceTree = "<group>"; };
+		1F6601F1215D413F008F9ADA /* UserListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListPresenter.swift; sourceTree = "<group>"; };
+		1F6601F3215D4156008F9ADA /* UserListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListRouter.swift; sourceTree = "<group>"; };
 		1F916205215392C80056C604 /* RandomUser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomUser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F916208215392C80056C604 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F91620F215392CA0056C604 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -101,7 +111,12 @@
 		1F6601E6215D3CE1008F9ADA /* User List */ = {
 			isa = PBXGroup;
 			children = (
+				1F6601EF215D412D008F9ADA /* UserList.swift */,
 				1F6601E7215D3CF4008F9ADA /* UserListModuleFactory.swift */,
+				1F6601EB215D40AF008F9ADA /* UserListViewController.swift */,
+				1F6601ED215D40E0008F9ADA /* UserListInteractor.swift */,
+				1F6601F1215D413F008F9ADA /* UserListPresenter.swift */,
+				1F6601F3215D4156008F9ADA /* UserListRouter.swift */,
 			);
 			path = "User List";
 			sourceTree = "<group>";
@@ -411,7 +426,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F6601EA215D3D32008F9ADA /* AppFactory.swift in Sources */,
+				1F6601EC215D40AF008F9ADA /* UserListViewController.swift in Sources */,
+				1F6601F2215D413F008F9ADA /* UserListPresenter.swift in Sources */,
+				1F6601F4215D4156008F9ADA /* UserListRouter.swift in Sources */,
+				1F6601EE215D40E0008F9ADA /* UserListInteractor.swift in Sources */,
 				1F916209215392C80056C604 /* AppDelegate.swift in Sources */,
+				1F6601F0215D412D008F9ADA /* UserList.swift in Sources */,
 				1F6601E8215D3CF4008F9ADA /* UserListModuleFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

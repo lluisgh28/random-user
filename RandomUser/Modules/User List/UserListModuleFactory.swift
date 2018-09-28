@@ -11,7 +11,16 @@ import UIKit
 class UserListModuleFactory {
     
     func makeViewController() -> UIViewController {
-        
-        return UIViewController()
+        let presenter = UserListPresenter()
+        let interactor = UserListInteractor(presenter: presenter)
+        let router = UserListRouter()
+        let viewController = UserListViewController(
+            interactor: interactor, router: router
+        )
+        presenter.viewController = viewController
+        router.viewController = viewController
+        viewController.title = "Random User"
+
+        return viewController
     }
 }
