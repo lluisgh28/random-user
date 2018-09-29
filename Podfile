@@ -7,8 +7,16 @@ workspace 'RandomUser.xcworkspace'
 # Common dependencies versions
 $rxSwiftVersion =                     '~> 4.2'
 
+def shared_RandomUserDataKit_pods
+  pod 'RxSwift',                        $rxSwiftVersion
+  pod 'RealmSwift',                     '~> 3.10'
+  pod 'RxRealm',                        '~> 0.7'
+end
+
 target 'RandomUser' do
   project 'RandomUser.xcodeproj'
+
+  shared_RandomUserDataKit_pods
 
   target 'RandomUserTests' do
     project 'RandomUser.xcodeproj'
@@ -27,10 +35,8 @@ end
 
 target 'RandomUserDataKit' do
   project 'RandomUserDataKit.xcodeproj'
-
-  pod 'RxSwift',                        $rxSwiftVersion
-  pod 'RealmSwift',                     '~> 3.10'
-  pod 'RxRealm',                        '~> 0.7'
+  
+  shared_RandomUserDataKit_pods
 
   target 'RandomUserDataKitTests' do
     project 'RandomUserDataKit.xcodeproj'
