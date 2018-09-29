@@ -48,8 +48,10 @@ class UserListPresenter: UserListPresenterInterface {
         return UserCellViewModel(
             name: makeFullNameText(firstName: user.firstName, lastName: user.lastName),
             email: user.email ?? "-",
-            pictureURL: user.thumbnailPictureURL,
-            phone: user.phone ?? "-"
+            pictureURL: user.largePictureURL,
+            phone: user.phone ?? "-",
+            route: UserList.SupportedRoute.userDetail(user: user),
+            deleteAction: UserList.SupportedAction.deleteUser(userId: user.id)
         )
     }
     
