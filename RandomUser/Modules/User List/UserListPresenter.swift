@@ -46,10 +46,12 @@ class UserListPresenter: UserListPresenterInterface {
     private func makeCellViewModel(user: User) -> UserCellViewModel {
         
         return UserCellViewModel(
-            name: user.fullName,
+            name: makeFullNameText(firstName: user.firstName, lastName: user.lastName),
             email: user.email,
             pictureURL: user.largePictureURL,
-            phone: user.phone
+            phone: user.phone,
+            route: UserList.SupportedRoute.userDetail(user: user),
+            deleteAction: UserList.SupportedAction.deleteUser(userId: user.id)
         )
     }
     

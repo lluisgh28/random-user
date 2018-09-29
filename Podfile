@@ -17,6 +17,8 @@ end
 target 'RandomUser' do
   project 'RandomUser.xcodeproj'
 
+  pod 'SDWebImage',                    '~> 4.4'
+
   shared_RandomUserDataKit_pods
 
   target 'RandomUserTests' do
