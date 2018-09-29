@@ -11,6 +11,7 @@ def shared_RandomUserDataKit_pods
   pod 'RxSwift',                        $rxSwiftVersion
   pod 'RealmSwift',                     '~> 3.10'
   pod 'RxRealm',                        '~> 0.7'
+  pod 'RxAlamofire',                    '~> 4.2'
 end
 
 target 'RandomUser' do

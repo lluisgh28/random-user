@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1F6601CC215BB1C3008F9ADA /* RealmUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6601CB215BB1C3008F9ADA /* RealmUser.swift */; };
 		1F6601CE215BBA63008F9ADA /* RealmUserDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6601CD215BBA63008F9ADA /* RealmUserDataStore.swift */; };
+		1F6601DA215CDE59008F9ADA /* APIUserDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6601D9215CDE59008F9ADA /* APIUserDataStore.swift */; };
 		1FD4F8FD2153A289009D9DC0 /* RandomUserDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FD4F8F32153A289009D9DC0 /* RandomUserDataKit.framework */; };
 		1FD4F9022153A289009D9DC0 /* RandomUserDataKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD4F9012153A289009D9DC0 /* RandomUserDataKitTests.swift */; };
 		1FD4F9042153A289009D9DC0 /* RandomUserDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FD4F8F62153A289009D9DC0 /* RandomUserDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -30,6 +31,7 @@
 		1F3074A0716CE44D719D49C5 /* Pods-RandomUserDataKit-RandomUserDataKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomUserDataKit-RandomUserDataKitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RandomUserDataKit-RandomUserDataKitTests/Pods-RandomUserDataKit-RandomUserDataKitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1F6601CB215BB1C3008F9ADA /* RealmUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUser.swift; sourceTree = "<group>"; };
 		1F6601CD215BBA63008F9ADA /* RealmUserDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUserDataStore.swift; sourceTree = "<group>"; };
+		1F6601D9215CDE59008F9ADA /* APIUserDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIUserDataStore.swift; sourceTree = "<group>"; };
 		1FD4F8F32153A289009D9DC0 /* RandomUserDataKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RandomUserDataKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FD4F8F62153A289009D9DC0 /* RandomUserDataKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RandomUserDataKit.h; sourceTree = "<group>"; };
 		1FD4F8F72153A289009D9DC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 			children = (
 				1F6601CB215BB1C3008F9ADA /* RealmUser.swift */,
 				1F6601CD215BBA63008F9ADA /* RealmUserDataStore.swift */,
+				1F6601D9215CDE59008F9ADA /* APIUserDataStore.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -283,15 +286,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-RandomUserDataKit-RandomUserDataKitTests/Pods-RandomUserDataKit-RandomUserDataKitTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxRealm/RxRealm.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRealm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
@@ -307,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F6601DA215CDE59008F9ADA /* APIUserDataStore.swift in Sources */,
 				1F6601CE215BBA63008F9ADA /* RealmUserDataStore.swift in Sources */,
 				1F6601CC215BB1C3008F9ADA /* RealmUser.swift in Sources */,
 			);
