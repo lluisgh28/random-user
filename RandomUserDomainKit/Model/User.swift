@@ -9,62 +9,39 @@
 import Foundation
 
 public struct User {
-    public struct Name {
-        let title: String
-        let first: String
-        let last: String
-        
-        public init(title: String, first: String, last: String) {
-            self.title = title
-            self.first = first
-            self.last = last
-        }
-    }
-
-    public struct Location {
-        let street: String
-        let city: String
-        let state: String
-        
-        public init(street: String, city: String, state: String) {
-            self.street = street
-            self.city = city
-            self.state = state
-        }
-    }
-
-    public struct Picture {
-        let large: URL?
-        let medium: URL?
-        let thumbnail: URL?
-        
-        public init(large: URL?, medium: URL?, thumbnail: URL?) {
-            self.large = large
-            self.medium = medium
-            self.thumbnail = thumbnail
-        }
-    }
-
     public let id: String
-    public let name: Name
-    public let email: String
-    public let picture: Picture
-    public let phone: String
-    public let gender: String
-    public let location: Location
-    public let registrationDate: Date
+
+    public let firstName: String?
+    public let lastName: String?
+    public let gender: String?
+    public let email: String?
+    public let phone: String?
+    public let street: String?
+    public let city: String?
+    public let state: String?
+    public let largePictureURL: URL?
+    public let mediumPictureURL: URL?
+    public let thumbnailPictureURL: URL?
+    public let registrationDate: Date?
     
-    public init(id: String, name: Name, email: String,
-                picture: Picture, phone: String, gender: String,
-                location: Location, registrationDate: Date) {
+    public init(id: String, firstName: String?, lastName: String?, gender: String?,
+                email: String?, phone: String?,
+                street: String?, city: String?, state: String?,
+                largePictureURL: URL?, mediumPictureURL: URL?, thumbnailPictureURL: URL?,
+                registrationDate: Date?) {
         
         self.id = id
-        self.name = name
-        self.email = email
-        self.picture = picture
-        self.phone = phone
+        self.firstName = firstName
+        self.lastName = lastName
         self.gender = gender
-        self.location = location
+        self.email = email
+        self.phone = phone
+        self.street = street
+        self.city = city
+        self.state = state
+        self.largePictureURL = largePictureURL
+        self.mediumPictureURL = mediumPictureURL
+        self.thumbnailPictureURL = thumbnailPictureURL
         self.registrationDate = registrationDate
     }
 }
