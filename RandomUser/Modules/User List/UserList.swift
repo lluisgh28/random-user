@@ -35,6 +35,7 @@ struct UserList {
         case loadMoreUsers
         case viewWillDisappear
         case deleteUser(userId: String)
+        case filter(text: String)
     }
 
     struct ViewModel {

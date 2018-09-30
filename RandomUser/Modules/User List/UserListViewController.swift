@@ -23,7 +23,8 @@ class UserListViewController: UIViewController, UserListViewControllerInterface 
     private let router: UserListRouterInterface
 
     private let tableView = UITableView()
-    
+    private let searchController = UISearchController(searchResultsController: nil)
+
     private var viewModel: UserList.ViewModel?
     
     init(interactor: UserListInteractorInterface, router: UserListRouterInterface) {
@@ -56,10 +57,15 @@ class UserListViewController: UIViewController, UserListViewControllerInterface 
     }
 
     private func setUpView() {
+        definesPresentationContext = true
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchBar.sizeToFit()
+
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UserTableViewCell.self, forCellReuseIdentifier: userCellId)
-        tableView.tableHeaderView = UIView()
+        tableView.tableHeaderView = searchController.searchBar
         tableView.tableFooterView = UIView()
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 44
@@ -178,5 +184,16 @@ extension UserListViewController: UITableViewDelegate {
         guard let deleteAction = cellViewModel.deleteAction as? UserList.SupportedAction else { return }
 
         interactor.dispatch(deleteAction)
+    }
+}
+
+extension UserListViewController: UISearchResultsUpdating {
+
+    func updateSearchResults(for searchController: UISearchController) {
+        
+        if let filterText = searchController.searchBar.text {
+            interactor.dispatch(.filter(text: filterText))
+            tableView.reloadData()
+        }
     }
 }
