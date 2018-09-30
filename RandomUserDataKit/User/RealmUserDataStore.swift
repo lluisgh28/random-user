@@ -42,7 +42,7 @@ class RealmUserDataStore {
         do {
             let realm = try Realm()
             try realm.write {
-                realm.add(users.compactMap(makeRealmUser(JSON:)))
+                realm.add(users.compactMap(makeRealmUser(JSON:)), update: true)
             }
             return Observable.just(())
         } catch (let error) {
