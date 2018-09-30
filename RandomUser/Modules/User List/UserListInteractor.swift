@@ -21,7 +21,9 @@ class UserListInteractor: UserListInteractorInterface {
     private let userRepository: UserRepository
     
     private var disposeBag: DisposeBag!
-    
+
+    private let filterSubject = BehaviorSubject<String>(value: "")
+
     private var state = UserList.State(users: [], isLoading: false, error: nil) {
         didSet {
             presenter.present(state)
@@ -44,15 +46,17 @@ class UserListInteractor: UserListInteractorInterface {
             unsubscribe()
         case .deleteUser(let userId):
             userRepository.deleteUser(withId: userId)
+        case .filter(let text):
+            filterSubject.on(.next(text))
+            print("FilterText \(text)")
         }
     }
     
     private func subscribe() {
         disposeBag = DisposeBag()
         presenter.present(state)
-        
-        userRepository
-            .allUsers()
+
+        filteredUsersObservable()
             .observeOn(ConcurrentDispatchQueueScheduler(qos: DispatchQoS.background))
             .subscribe(
                 onNext: { [weak self] users in
@@ -67,7 +71,29 @@ class UserListInteractor: UserListInteractorInterface {
             )
             .disposed(by: disposeBag)
     }
-    
+
+
+    private func filteredUsersObservable() -> Observable<[User]> {
+
+        return Observable
+            .combineLatest(
+                userRepository.allUsers(),
+                filterSubject.asObservable()
+            )
+            .map({ (users, filterText) -> [User] in
+                return users.filter { self.filter(user: $0, withText: filterText) }
+            })
+    }
+
+
+    private func filter(user: User, withText text: String) -> Bool {
+        guard !text.isEmpty else { return true }
+
+        return user.firstName.localizedCaseInsensitiveContains(text)
+            || user.lastName.localizedCaseInsensitiveContains(text)
+            || user.email.localizedCaseInsensitiveContains(text)
+    }
+
     private func loadMoreUsers() {
         guard !state.isLoading else { return }
 
