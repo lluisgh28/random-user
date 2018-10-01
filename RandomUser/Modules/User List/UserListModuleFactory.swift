@@ -12,9 +12,12 @@ import RandomUserDomainKit
 class UserListModuleFactory {
     
     private let userRepository: UserRepository
-    
-    init(userRepository: UserRepository) {
+
+    private let userDetailModuleFactory: UserDetailModuleFactory
+
+    init(userRepository: UserRepository, userDetailModuleFactory: UserDetailModuleFactory) {
         self.userRepository = userRepository
+        self.userDetailModuleFactory = userDetailModuleFactory
     }
     
     func makeViewController() -> UIViewController {
@@ -23,7 +26,7 @@ class UserListModuleFactory {
             presenter: presenter,
             userRepository: userRepository
         )
-        let router = UserListRouter()
+        let router = UserListRouter(userDetailModuleFactory: userDetailModuleFactory)
         let viewController = UserListViewController(
             interactor: interactor, router: router
         )

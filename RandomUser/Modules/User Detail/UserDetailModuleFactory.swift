@@ -14,7 +14,8 @@ class UserDetailModuleFactory {
     func makeViewController(user: User) -> UIViewController {
         let presenter = UserDetailPresenter()
         let interactor = UserDetailInteractor(
-            presenter: presenter
+            presenter: presenter,
+            user: user
         )
         let router = UserDetailRouter()
         let viewController = UserDetailViewController(

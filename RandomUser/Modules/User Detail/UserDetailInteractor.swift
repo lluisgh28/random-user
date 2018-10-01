@@ -16,13 +16,20 @@ protocol UserDetailPresenterInterface {
 class UserDetailInteractor: UserDetailInteractorInterface {
 
     private let presenter: UserDetailPresenterInterface
+    private let user: User
 
-
-    init(presenter: UserDetailPresenterInterface) {
+    init(presenter: UserDetailPresenterInterface, user: User) {
         self.presenter = presenter
+        self.user = user
     }
 
     func dispatch(_ action: UserDetail.SupportedAction) {
 
+        switch action {
+        case .viewWillAppear:
+            presenter.present(UserDetail.State(user: user))
+        case .viewWillDisappear:
+            return
+        }
     }
 }
