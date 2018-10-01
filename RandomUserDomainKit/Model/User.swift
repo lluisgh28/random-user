@@ -62,3 +62,7 @@ public extension User {
         }
     }
 }
+
+extension User: Decodable {
+    
+}

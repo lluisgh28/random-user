@@ -11,5 +11,9 @@ import RandomUserDataKit
 
 class AppFactory {
     lazy var userRepository = UserDataStore()
-    lazy var userListModuleFactory = UserListModuleFactory(userRepository: userRepository)
+    lazy var userDetailModuleFactory = UserDetailModuleFactory()
+    lazy var userListModuleFactory = UserListModuleFactory(
+        userRepository: userRepository,
+        userDetailModuleFactory: userDetailModuleFactory
+    )
 }
