@@ -46,26 +46,12 @@ class UserListPresenter: UserListPresenterInterface {
     private func makeCellViewModel(user: User) -> UserCellViewModel {
         
         return UserCellViewModel(
-            name: makeFullNameText(firstName: user.firstName, lastName: user.lastName),
+            name: user.fullName ?? "-",
             email: user.email ?? "-",
             pictureURL: user.largePictureURL,
             phone: user.phone ?? "-",
             route: UserList.SupportedRoute.userDetail(user: user),
             deleteAction: UserList.SupportedAction.deleteUser(userId: user.id)
         )
-    }
-    
-    private func makeFullNameText(firstName: String?, lastName: String?) -> String {
-        if let firstName = firstName {
-            if let lastName = lastName {
-                return firstName + " " + lastName
-            }
-            
-            return firstName
-        } else if let lastName = lastName {
-            return lastName
-        } else {
-            return "-"
-        }
-    }
+    }    
 }

@@ -45,3 +45,20 @@ public struct User {
         self.registrationDate = registrationDate
     }
 }
+
+public extension User {
+
+    public var fullName: String? {
+        if let firstName = firstName {
+            if let lastName = lastName {
+                return firstName + " " + lastName
+            }
+
+            return firstName
+        } else if let lastName = lastName {
+            return lastName
+        } else {
+            return nil
+        }
+    }
+}
