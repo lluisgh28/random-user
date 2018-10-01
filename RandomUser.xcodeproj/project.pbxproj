@@ -22,8 +22,14 @@
 		1FD4F8BB2153A1A6009D9DC0 /* RandomUserDomainKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FD4F8BA2153A1A6009D9DC0 /* RandomUserDomainKit.framework */; };
 		1FD4F90E2153A2B7009D9DC0 /* RandomUserDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FD4F90D2153A2B7009D9DC0 /* RandomUserDataKit.framework */; };
 		1FF7B18A215E73EB00D6664C /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF7B189215E73EB00D6664C /* UserTableViewCell.swift */; };
+		1FF7B18D2161F6B100D6664C /* UserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF7B18C2161F6B100D6664C /* UserDetail.swift */; };
 		1FF7B1902161F6D500D6664C /* ModuleTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF7B18F2161F6D500D6664C /* ModuleTypes.swift */; };
 		1FF7B1922161F81F00D6664C /* UserHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF7B1912161F81F00D6664C /* UserHeaderView.swift */; };
+		1FF7B1942161FF5400D6664C /* UserDetailModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF7B1932161FF5400D6664C /* UserDetailModuleFactory.swift */; };
+		1FF7B1962161FF8200D6664C /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF7B1952161FF8200D6664C /* UserDetailViewController.swift */; };
+		1FF7B1982162036900D6664C /* UserDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF7B1972162036900D6664C /* UserDetailInteractor.swift */; };
+		1FF7B19A216204C200D6664C /* UserDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF7B199216204C200D6664C /* UserDetailPresenter.swift */; };
+		1FF7B19C2162051B00D6664C /* UserDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF7B19B2162051B00D6664C /* UserDetailRouter.swift */; };
 		596AE0F6A382F7DD3B078716 /* Pods_RandomUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C8BC9DB8B32D4BFE361242F /* Pods_RandomUser.framework */; };
 		B2A20B444CF962EC38FB80D4 /* Pods_RandomUser_RandomUserTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE24192EA399B7D243070CA4 /* Pods_RandomUser_RandomUserTests.framework */; };
 /* End PBXBuildFile section */
@@ -68,8 +74,14 @@
 		1FD4F8BA2153A1A6009D9DC0 /* RandomUserDomainKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RandomUserDomainKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FD4F90D2153A2B7009D9DC0 /* RandomUserDataKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RandomUserDataKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FF7B189215E73EB00D6664C /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		1FF7B18C2161F6B100D6664C /* UserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetail.swift; sourceTree = "<group>"; };
 		1FF7B18F2161F6D500D6664C /* ModuleTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleTypes.swift; sourceTree = "<group>"; };
 		1FF7B1912161F81F00D6664C /* UserHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeaderView.swift; sourceTree = "<group>"; };
+		1FF7B1932161FF5400D6664C /* UserDetailModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailModuleFactory.swift; sourceTree = "<group>"; };
+		1FF7B1952161FF8200D6664C /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		1FF7B1972162036900D6664C /* UserDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailInteractor.swift; sourceTree = "<group>"; };
+		1FF7B199216204C200D6664C /* UserDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailPresenter.swift; sourceTree = "<group>"; };
+		1FF7B19B2162051B00D6664C /* UserDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailRouter.swift; sourceTree = "<group>"; };
 		8B5FB4547400686611EC5D60 /* Pods-RandomUser-RandomUserTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomUser-RandomUserTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RandomUser-RandomUserTests/Pods-RandomUser-RandomUserTests.release.xcconfig"; sourceTree = "<group>"; };
 		AE24192EA399B7D243070CA4 /* Pods_RandomUser_RandomUserTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RandomUser_RandomUserTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0D4B21714435D1456568A1D /* Pods-RandomUser-RandomUserTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomUser-RandomUserTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RandomUser-RandomUserTests/Pods-RandomUser-RandomUserTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -110,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				1F6601E6215D3CE1008F9ADA /* User List */,
+				1FF7B18B2161F68D00D6664C /* User Detail */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -189,6 +202,19 @@
 				1FF7B1912161F81F00D6664C /* UserHeaderView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		1FF7B18B2161F68D00D6664C /* User Detail */ = {
+			isa = PBXGroup;
+			children = (
+				1FF7B18C2161F6B100D6664C /* UserDetail.swift */,
+				1FF7B1932161FF5400D6664C /* UserDetailModuleFactory.swift */,
+				1FF7B1952161FF8200D6664C /* UserDetailViewController.swift */,
+				1FF7B1972162036900D6664C /* UserDetailInteractor.swift */,
+				1FF7B199216204C200D6664C /* UserDetailPresenter.swift */,
+				1FF7B19B2162051B00D6664C /* UserDetailRouter.swift */,
+			);
+			path = "User Detail";
 			sourceTree = "<group>";
 		};
 		1FF7B18E2161F6BA00D6664C /* Shared */ = {
@@ -454,16 +480,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FF7B1962161FF8200D6664C /* UserDetailViewController.swift in Sources */,
 				1F6601EA215D3D32008F9ADA /* AppFactory.swift in Sources */,
 				1FF7B18A215E73EB00D6664C /* UserTableViewCell.swift in Sources */,
 				1F6601EC215D40AF008F9ADA /* UserListViewController.swift in Sources */,
+				1FF7B18D2161F6B100D6664C /* UserDetail.swift in Sources */,
 				1FF7B1902161F6D500D6664C /* ModuleTypes.swift in Sources */,
 				1F6601F2215D413F008F9ADA /* UserListPresenter.swift in Sources */,
 				1F6601F4215D4156008F9ADA /* UserListRouter.swift in Sources */,
+				1FF7B19C2162051B00D6664C /* UserDetailRouter.swift in Sources */,
 				1F6601EE215D40E0008F9ADA /* UserListInteractor.swift in Sources */,
+				1FF7B1982162036900D6664C /* UserDetailInteractor.swift in Sources */,
 				1F916209215392C80056C604 /* AppDelegate.swift in Sources */,
 				1F6601F0215D412D008F9ADA /* UserList.swift in Sources */,
 				1FF7B1922161F81F00D6664C /* UserHeaderView.swift in Sources */,
+				1FF7B1942161FF5400D6664C /* UserDetailModuleFactory.swift in Sources */,
+				1FF7B19A216204C200D6664C /* UserDetailPresenter.swift in Sources */,
 				1F6601E8215D3CF4008F9ADA /* UserListModuleFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
