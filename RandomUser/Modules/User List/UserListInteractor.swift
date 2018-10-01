@@ -48,7 +48,6 @@ class UserListInteractor: UserListInteractorInterface {
             userRepository.deleteUser(withId: userId)
         case .filter(let text):
             filterSubject.on(.next(text))
-            print("FilterText \(text)")
         }
     }
     
