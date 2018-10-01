@@ -9,9 +9,6 @@
 import Foundation
 import RandomUserDomainKit
 
-protocol Route {}
-protocol Action {}
-
 struct UserList {
  
     struct State {
