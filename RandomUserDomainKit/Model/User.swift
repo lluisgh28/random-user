@@ -45,3 +45,10 @@ public struct User {
         self.registrationDate = registrationDate
     }
 }
+
+public extension User {
+
+    public var fullName: String {
+        return firstName + " " + lastName
+    }
+}
